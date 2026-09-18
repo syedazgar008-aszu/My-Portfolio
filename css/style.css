@@ -64,7 +64,7 @@ html {
 }
 
 body {
-  font-family: "DM Sans", system-ui, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
@@ -243,7 +243,7 @@ button {
 }
 
 .logo {
-  font: 800 23px "Syne";
+  font: 800 23px "Inter";
   letter-spacing: -1px;
   background: linear-gradient(135deg, var(--gold), var(--text));
   -webkit-background-clip: text;
@@ -365,7 +365,7 @@ button {
 }
 
 .hero-title {
-  font: 800 clamp(60px, 9vw, 120px) / 0.9 "Syne";
+  font: 800 clamp(60px, 9vw, 120px) / 0.9 "Inter";
   letter-spacing: -3px;
   margin: 20px 0 12px;
   word-spacing: 100vw;
@@ -383,7 +383,7 @@ button {
 }
 
 .hero-subtitle {
-  font: 600 clamp(24px, 3vw, 38px) "Space Grotesk";
+  font: 600 clamp(24px, 3vw, 38px) "Inter";
   min-height: 48px;
   margin-bottom: 24px;
 }
@@ -652,7 +652,7 @@ button {
 .profile-card h3 {
   position: relative;
   z-index: 1;
-  font: 700 24px "Syne";
+  font: 700 24px "Inter";
   margin-top: 20px;
 }
 
@@ -707,7 +707,7 @@ button {
 
 .mini-stats strong {
   display: block;
-  font: 700 22px "Syne";
+  font: 700 22px "Inter";
   background: linear-gradient(135deg, var(--gold), var(--accent2));
   -webkit-background-clip: text;
   background-clip: text;
@@ -766,7 +766,7 @@ button {
 }
 
 .heading h2 {
-  font: 800 clamp(42px, 6vw, 72px) / 1.1 "Syne";
+  font: 800 clamp(42px, 6vw, 72px) / 1.1 "Inter";
   letter-spacing: -2px;
   margin-top: 14px;
 }
@@ -850,7 +850,7 @@ button {
 
 .stat strong {
   display: block;
-  font: 800 36px "Syne";
+  font: 800 36px "Inter";
   background: linear-gradient(135deg, var(--gold), var(--accent2));
   -webkit-background-clip: text;
   background-clip: text;
@@ -911,7 +911,7 @@ button {
 }
 
 .skill h3 {
-  font: 700 19px "Syne";
+  font: 700 19px "Inter";
   margin-bottom: 4px;
 }
 
@@ -994,7 +994,7 @@ button {
 }
 
 .timeline-item h3 {
-  font: 700 26px "Syne";
+  font: 700 26px "Inter";
   margin-top: 8px;
   color: var(--text);
 }
@@ -1071,7 +1071,7 @@ button {
 }
 
 .project h3 {
-  font: 700 24px "Syne";
+  font: 700 24px "Inter";
   margin-top: 3px;
   color: var(--text);
 }
@@ -1156,7 +1156,7 @@ button {
 }
 
 .idea-box h2 {
-  font: 800 40px "Syne";
+  font: 800 40px "Inter";
   margin: 12px 0;
   color: var(--text);
 }
@@ -1200,7 +1200,7 @@ button {
 }
 
 .contact-box p {
-  font: 600 22px "Syne";
+  font: 600 22px "Inter";
   margin-top: 8px;
   color: var(--text);
 }
