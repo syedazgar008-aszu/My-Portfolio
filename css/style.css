@@ -339,6 +339,23 @@ button {
   grid-template-columns: 1.1fr 0.9fr;
   gap: 40px;
   align-items: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+.hero-copy,
+.hero-visual {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.hero-badge,
+.hero-title,
+.hero-subtitle,
+.lead {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .hero-badge {
@@ -1317,6 +1334,10 @@ footer {
     justify-content: center;
   }
 
+  .hero-badge {
+    margin-inline: auto;
+  }
+
   .hero-visual {
     min-height: 500px;
   }
@@ -1529,6 +1550,50 @@ footer {
   .cursor-glow,
   .cursor-dot {
     display: none;
+  }
+}
+
+/* -------------------------------------------------------------
+   MOBILE PERFORMANCE MODE
+   Blurred blobs + rotating orbit rings + backdrop-filter blur
+   stacked together are very GPU-heavy. On mid/low-end phones this
+   causes dropped frames and a "torn"/shifted-looking repaint,
+   especially while the hero's typing animation is reflowing text.
+   Cut the cost sharply on small/touch screens without losing the look.
+   ------------------------------------------------------------- */
+@media (max-width: 768px), (pointer: coarse) {
+  .blob {
+    filter: blur(50px);
+    opacity: 0.1;
+  }
+
+  .blob-3 {
+    display: none;
+  }
+
+  .orbit-b {
+    animation-duration: 40s;
+  }
+
+  .orbit-c {
+    display: none;
+  }
+
+  .header,
+  .profile-card,
+  .float-tag {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+}
+
+@media (max-width: 480px) {
+  .blob {
+    display: none;
+  }
+
+  .orbit-b {
+    animation: none;
   }
 }
 
