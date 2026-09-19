@@ -368,7 +368,6 @@ button {
   font: 800 clamp(60px, 9vw, 120px) / 0.9 "Inter";
   letter-spacing: -3px;
   margin: 20px 0 12px;
-  word-spacing: 100vw;
 }
 
 .word-wrap {
