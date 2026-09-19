@@ -61,6 +61,8 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -533,6 +535,8 @@ button {
   display: grid;
   place-items: center;
   position: relative;
+  overflow: hidden;
+  max-width: 100%;
 }
 
 .orbit {
@@ -1405,18 +1409,18 @@ footer {
   }
 
   .orbit-a {
-    width: 280px;
-    height: 280px;
+    width: min(280px, 75vw);
+    height: min(280px, 75vw);
   }
 
   .orbit-b {
-    width: 340px;
-    height: 340px;
+    width: min(340px, 90vw);
+    height: min(340px, 90vw);
   }
 
   .orbit-c {
-    width: 420px;
-    height: 420px;
+    width: min(420px, 100vw);
+    height: min(420px, 100vw);
   }
 
   .float-tag {
