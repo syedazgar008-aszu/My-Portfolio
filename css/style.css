@@ -91,6 +91,33 @@ button {
   color: var(--bg);
 }
 
+/* Nav / buttons are UI, not text — they must never get the gold selection box */
+.header,
+.header a,
+.header button,
+.btn,
+.text-link,
+.project-link,
+.skip-link {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.header a,
+.btn,
+.text-link {
+  -webkit-user-drag: none;
+}
+
+/* Safety net: even if something is selected, keep the header clean */
+.header ::selection,
+.btn ::selection {
+  background: transparent;
+  color: inherit;
+}
+
 :focus-visible {
   outline: 2px solid var(--accent2);
   outline-offset: 4px;

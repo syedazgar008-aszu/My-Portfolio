@@ -47,6 +47,14 @@ menu?.addEventListener("click",()=>{
 $$(".nav a").forEach(a=>a.addEventListener("click",closeMenu));
 addEventListener("keydown",e=>{e.key==="Escape"&&closeMenu()});
 
+// ======= CLEAR TEXT SELECTION (nav + buttons) =======
+const clearSelection=()=>{const s=getSelection();s&&s.rangeCount&&s.removeAllRanges()};
+$$(".header a,.header button,.btn,.text-link").forEach(el=>{
+  el.addEventListener("mousedown",e=>{e.detail>1&&e.preventDefault()}); // stop double-click selecting
+  el.addEventListener("click",clearSelection);                          // wipe any leftover selection
+});
+addEventListener("hashchange",clearSelection);
+
 // ======= PERFORMANCE: SCROLL UI THROTTLED =======
 let ticking=false;
 function scrollUI(){
