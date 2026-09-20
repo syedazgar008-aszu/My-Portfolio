@@ -57,10 +57,12 @@ addEventListener("hashchange",clearSelection);
 
 // ======= PERFORMANCE: SCROLL UI THROTTLED =======
 let ticking=false;
+const scrollHint=$(".scroll-hint");
 function scrollUI(){
   const h=document.documentElement.scrollHeight-innerHeight;
   if(progress)progress.style.width=`${h>0?(scrollY/h)*100:0}%`;
   header?.classList.toggle("scrolled",scrollY>30);
+  scrollHint?.classList.toggle("hide",scrollY>60);
   ticking=false;
 }
 

@@ -565,6 +565,14 @@ button {
   letter-spacing: 2px;
   font-weight: 700;
   animation: float-up 3s ease-in-out infinite;
+  transition: opacity var(--transition-base), visibility var(--transition-base);
+}
+
+/* Once the visitor leaves the hero (scroll or nav click), remove the hint completely */
+.scroll-hint.hide {
+  opacity: 0;
+  visibility: hidden;
+  animation: none;
 }
 
 .scroll-line {
